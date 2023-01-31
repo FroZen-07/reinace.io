@@ -1,0 +1,53 @@
+.title-block {
+  text-align: center;
+  @include media(">=desktop") {
+    text-align: left;
+  }
+  h1, .h1 {
+    font-size: 22px;
+    line-height: 36px;
+    font-family: $main-font;
+    font-weight: 800;
+    color: $darker-grey;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &.white{
+      color: $white;
+    }
+    @include media(">=desktop") {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+}
+
+.title-bg{
+  font-size: 30px;
+  line-height: 34px;
+  color: $white;
+  font-family: $desc-font;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  @include media(">=desktop") {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 200px;
+    height: 53px;
+    background: #2647A8;
+    z-index: -1;
+    @include media(">=desktop") {
+      width: 273px;
+      height: 73px;
+    }
+  }
+}

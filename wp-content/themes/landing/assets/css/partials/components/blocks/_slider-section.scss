@@ -1,0 +1,156 @@
+.reasons{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include media(">=desktop") {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+  }
+
+
+  .title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      padding-right: 2rem;
+      padding-bottom: 0;
+    }
+  }
+
+  .slick-track {
+      display: flex !important;
+      padding-top: 2rem;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-slide {
+    margin-right: 2rem;
+    background-color: $darker-grey;
+    position: relative;
+    height: inherit !important;
+    transition: transform .25s;
+
+    @include media(">=tablet-landscape") {
+      margin-right: 3rem;
+    }
+
+    @include media(">=medium-desktop") {
+      margin-right: 5rem;
+
+    }
+
+    &.move {
+      transform: translateX(-100%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      max-height: 31.2rem;
+      padding-top: 91%;
+      display: block;
+      background-color: transparent;
+      border: 1px solid #EBA34A;
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      z-index: 5;
+      opacity: 0;
+      transition: opacity .25s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    .image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-height: 31.2rem;
+      height: 100%;
+      padding-top: 91%;
+    }
+
+    .text-content {
+      padding: 3rem 2rem;
+
+      h5 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: $white;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+
+      p{
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        color: $white;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+.slick-slide {
+  outline: none !important;
+}
+.slick-slide:focus { outline: none !important; }
+.slick-list {
+  outline: none !important;
+}
+.bg-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+.arrows-block {
+  display: none;
+  @include media(">=tablet-landscape") {
+    display: flex;
+  }
+  .arrow-prev {
+    margin-right: 4rem;
+  }
+
+  .arrow-item {
+    cursor: pointer;
+
+    &.not-allowed {
+      cursor: auto;
+
+      svg {
+        stroke:#B7B5B2;
+      }
+    }
+  }
+
+  svg {
+    stroke: $orange;
+  }
+}

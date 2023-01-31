@@ -1,0 +1,155 @@
+.text-template {
+  padding-top: 130px;
+  @include media(">=tablet-landscape") {
+    padding-top: 150px;
+  }
+  .title-block {
+    margin-bottom: 30px;
+  }
+  h2, .h2 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1.43px;
+    line-height: 49px;
+    color: $darker-grey;
+    text-align: center;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+  }
+
+  .wrap-block-holder {
+    max-width: 888px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .wrap-block {
+    max-width: 1500px;
+    width: 100%;
+    margin-top: 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    .title-block-left {
+      display: none;
+
+      @include media(">=desktop") {
+        position: absolute;
+        left: 0;
+        color: #FEFAF4;
+        text-transform: uppercase;
+        font-size: 25rem;
+        font-weight: 800;
+        top: 0;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: block;
+      }
+
+    }
+  }
+  .text-content {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+      padding-bottom: 30px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $darker-grey;
+    }
+    h2 {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      padding-top: 40px;
+      font-weight: 500;
+      color: $darker-grey;
+
+    }
+    h3 {
+      font-size: 24px;
+      letter-spacing: 0;
+      line-height: 29px;
+      font-family: $desc-font;
+      text-transform: uppercase;
+      color: $darker-grey;
+      margin-bottom: 28px;
+      margin-top: 6rem;
+
+      span {
+        display: inline-block;
+        border-bottom: 2px solid $orange;
+      }
+    }
+    h4 {
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 25px;
+      font-family: $desc-font;
+      text-transform: uppercase;
+      color: $darker-grey;
+      margin-bottom: 28px;
+      margin-top: 30px;
+    }
+
+    h5 {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 20px;
+      font-family: $desc-font;
+      text-transform: uppercase;
+      color: $darker-grey;
+      margin-bottom: 28px;
+      margin-top: 30px;
+    }
+    h6 {
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 18px;
+      font-family: $desc-font;
+      text-transform: uppercase;
+      color: $darker-grey;
+      margin-bottom: 28px;
+      margin-top: 30px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 20px;
+      color: $darker-grey;
+      font-family: $desc-font;
+
+      &:last-child {
+        margin-bottom: 80px;
+      }
+    }
+    strong {
+      font-weight: 600;
+    }
+
+    ol {
+      counter-reset: item;
+      margin-left: 0;
+      padding-left: 0;
+
+      li {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+      li::before {
+        display: inline-block;
+        content: counter(item) ") ";
+        counter-increment: item;
+        width: 20px;
+        margin-left: -20px;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+

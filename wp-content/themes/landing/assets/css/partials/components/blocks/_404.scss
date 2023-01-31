@@ -1,0 +1,52 @@
+.not-found {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 150px;
+  background-color: $darker-grey;
+
+  .message-box {
+    height: 200px;
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    transform: translateX(-50%);
+    color: $white;
+    font-weight: 300;
+    text-align: center;
+  }
+  .message-box h1 {
+    font-size: 13rem;
+    margin-bottom: 22px;
+  }
+  .buttons-con .action-link-wrap {
+    margin-top: 40px;
+  }
+  .buttons-con .action-link-wrap a {
+    min-width: 220px;
+    padding: 21px 15px;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #fff;
+    background-color: $orange;
+    transition: background-color .25s;
+    border-radius: 2px;
+    &:hover{
+      background-color: $white;
+      color: $darker-grey;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .message-box {
+
+      h1 {
+        font-size: 10rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+$html-font-size: 62.5%;
+
+/* breakpoints */
+
+$screen-xxs: 321px !default; // 480px
+$screen-xs: 37.5em !default; // 600px
+// Small screen / tablet
+$screen-sm: 48em !default; // 767px
+// Medium screen / desktop
+$screen-md: 62em !default; // 992px
+// Large screen
+$screen-lg: 75em !default; // 1200px
+// Extra large screen
+$screen-xlg: 87.5em !default; // 1400px
+// Super extra large screen
+$screen-xxlg: 100em !default; // 1600px
+$content-max-width: 160rem !default;
+$content-min-width: 30rem !default;
+// for min-width media
+$screen-xs-min: $screen-xs !default; // from 768
+$screen-sm-min: $screen-sm !default; // from 992
+$screen-md-min: $screen-md !default; // from 1200
+$screen-lg-min: $screen-lg !default; // from 1400
+$screen-xlg-min: $screen-xlg !default; // from 1400
+// for max-width media
+$screen-xs-max: ($screen-sm - 0.0625) !default; // till 767
+$screen-sm-max: ($screen-md - 0.0625) !default; // till 991
+$screen-md-max: ($screen-lg - 0.0625) !default; // till 1199
+$screen-lg-max: ($screen-xlg - 0.0625) !default; // till 1399
+$screen-xlg-max: ($screen-xxlg - 0.0625) !default; // till 1599
+$h-screen-sm-max: 50em;
+
+/* color variables */
+
+$white: #fff; //const
+$black: #333; //const
+$dark-grey: #2A2928; //const
+$medium-grey: #3C3B39; //const
+$darker-grey: #353232; //const
+$blue: #002862;
+$bg-blue: #2D3C68;
+$grey: #f2f2f2;
+$orange: #E8712D;
+$red: #d02121;
+$red-second: #d93b3d;
+$red-third: #ff3b57;
+$pink: #f03866;
+$border-color-grey: #f0f0f0;
+$yellow: #eaff00;
+$orange: #E78F24;
+
+/* fonts */
+
+$main-font: 'Montserrat', sans-serif;
+$desc-font: 'Proxima Nova';
+
+$default-fonts: $main-font,
+'sans-serif';
+$desc-font: $desc-font,
+$main-font,
+'sans-serif';
+
+
+// media settings
+$breakpoints: (
+        mobile-landscape: 568px,
+        tablet: 768px,
+        tablet-landscape: 1024px,
+        desktop: 1200px,
+        medium-desktop: 1440px,
+        large-desktop: 1800px,
+        ultra-desktop: 2400px
+);

@@ -1,0 +1,171 @@
+.account-types {
+    .h1 {
+        color: $darker-grey;
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 1.43px;
+        line-height: 49px;
+        margin-bottom: 4rem;
+        padding-bottom: 0;
+
+        @include media(">=desktop") {
+            margin-bottom: 8rem;
+        }
+    }
+
+    padding-top: 12rem;
+
+    @include media(">=desktop") {
+        padding-top: 15rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        @include media(">=tablet") {
+            margin-left: -1.2rem;
+            margin-right: -1.2rem;
+        }
+
+        @include media(">=desktop") {
+            margin-left: -1.2rem;
+            margin-right: -1.2rem;
+        }
+    }
+
+    &__item {
+        border-radius: 4px;
+        box-shadow: 0 0 13px 1px rgba(0,0,0,0.14);
+        width: 100%;
+        margin-bottom: 3rem;
+
+        @include media(">=tablet") {
+            width: calc(50% - 2.4rem);
+            margin-right: 1.2rem;
+            margin-left: 1.2rem;
+        }
+
+        @include media(">=desktop") {
+            width: calc(25% - 2.4rem);
+    
+            margin-bottom: 10rem;
+        }
+
+        &-holder {
+            padding: 2rem 1.8rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        &-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            img {
+                margin-right: 1.5rem;
+            }
+
+            h3 {
+                font-size: 3.4rem;
+                letter-spacing: 1.31px;
+                line-height: 41px;
+                font-family: $desc-font;
+                color: $darker-grey;
+                font-weight: 800;
+            }
+        }
+
+        &-list {
+            padding-left: 1.7rem;
+
+            &-item {
+                font-size: 1.6rem;
+                font-weight: 300;
+                letter-spacing: -0.1px;
+                font-family: $desc-font;
+                margin-bottom: 1.2rem;
+                line-height: 2rem;
+                display: flex;
+
+                .fa {
+                    margin-right: .8rem;
+                    font-size: 1.8rem;
+                    display: block;
+                }
+            }
+        }
+
+        &-price-holder {
+            border-top: 2px solid #ECEBEA;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 17rem;
+            z-index: 10;
+        }
+    
+        &-price {
+            text-align: center;
+            color: $darker-grey;
+            font-family: $desc-font;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1.23px;
+            line-height: 39px;
+            padding-top: 2.2rem;
+            margin-bottom: 2.8rem;
+    
+            span {
+                font-size: 18px;
+                letter-spacing: 0.19px;
+                line-height: 22px;
+            }
+        }
+
+        &-button {
+            text-align: center;
+
+            span {
+                display: block;
+                max-width: 26rem;
+                width: 100%;
+                background-color: $orange;
+                padding: 2rem;
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.9px;
+                line-height: 22px;
+                text-transform: uppercase;
+                margin: 0 auto 2rem;
+            }
+        }
+
+        &-link {
+            display: block;
+            position: relative;
+            padding-bottom: 17rem;
+            background-color: $white;
+            height: 100%;
+
+            &:hover {
+                background: linear-gradient(135.34deg, #FFCD49 0%, #EE901E 100%);
+
+                .account-types__item-title > h3, .account-types__item-price, .account-types__item-list-item {
+                    color: $white;
+                }
+
+                .account-types__item-button {
+                    span {
+                        background-color: $white;
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}

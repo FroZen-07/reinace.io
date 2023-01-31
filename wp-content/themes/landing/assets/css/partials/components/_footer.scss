@@ -1,0 +1,121 @@
+.footer {
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  @include media(">=desktop") {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  color: $white;
+  background-color: $dark-grey;
+  .footer-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include media(">=desktop") {
+      justify-content: space-between;
+      flex-direction: row;
+      padding-left: 0;
+      margin-bottom: 4rem;
+    }
+
+  }
+  .header_logo {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    @include media(">=desktop") {
+      margin-right: 10rem;
+      margin-bottom: 0;
+    }
+    @include media(">=large-desktop") {
+      margin-right: 20rem;
+    }
+  }
+  .header_link {
+    line-height: 33px;
+  }
+  .footer-menu {
+    @include media(">=desktop") {
+      justify-content: space-between;
+      display: flex;
+      margin-top: 0;
+    }
+    .footer-menu-col {
+      margin-top: 20px;
+      margin-bottom: 4rem;
+      @include media(">=desktop") {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      @include media(">=desktop") {
+        margin-right: 4rem;
+      }
+      @include media(">=medium-desktop") {
+        margin-right: 7rem;
+      }
+      &:first-child {
+
+        @include media(">=large-desktop") {
+          margin-right: 9rem;
+        }
+        & > ul {
+          &:before {
+            background-color: $orange;
+          }
+        }
+      }
+      &:last-child {
+        @include media(">=large-desktop") {
+          margin-right: 10rem;
+        }
+      }
+      & > h5 {
+        font-size: 16px;
+        line-height: 20px;
+        color: #EFECE9;
+        position: relative;
+        font-family: $desc-font;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          white-space: nowrap;
+        }
+
+        @include media(">=desktop") {
+          margin-bottom: 4.5rem;
+        }
+      }
+      ul {
+        li {
+          font-size: 14px;
+          line-height: 17px;
+          color: #EFECE9;
+          margin-top: 15px;
+          font-family: $desc-font;
+          @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            white-space: nowrap;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    color: #EFECE9;
+    font-family: $desc-font;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    border-top: 1px solid #504d4c;
+    padding-top: 2rem;
+
+    @include media(">=desktop") {
+      padding-top: 4rem;
+    }
+  }
+}

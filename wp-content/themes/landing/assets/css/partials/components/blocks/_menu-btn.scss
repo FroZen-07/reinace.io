@@ -1,0 +1,101 @@
+$menu-btn-color: $white;
+$menu-btn-color--active: $white;
+.menu-btn {
+  font-size: 5rem;
+  display: none;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  right: 2rem;
+  top: 1.3rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 101;
+  &:hover {
+    .menu-btn_middle,
+    .menu-btn_top {
+
+    }
+  }
+}
+
+.menu-btn_middle,
+.menu-btn_top {
+  background: $menu-btn-color;
+  will-change: transform;
+
+}
+
+.menu-btn span {
+  display: block;
+}
+
+.menu-btn_inner {
+  width: 27px;
+  height: 21px;
+  position: absolute;
+  top: 7px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 200;
+
+}
+
+.menu-btn_top {
+  display: block;
+  position: relative;
+  top: 0;
+  width: 26px;
+  height: 3px;
+  border: none;
+  transition: transform 0.5s, top 0.2s, background-color .25s;
+}
+
+.menu-btn_middle {
+  display: block;
+  position: relative;
+  width:26px;
+  height: 3px;
+  top: .14em;
+  border: none;
+  transition: transform 0.5s, top 0.2s, background-color .25s;
+}
+
+
+.is-swipe-menu-shown .menu-btn_inner {
+  .menu-btn_top {
+    top: 6px;
+    transform: rotate(-45deg);
+  }
+  .menu-btn_middle {
+    top: 3px;
+    transform: rotate(45deg);
+  }
+
+}
+
+@media only screen and (max-width: 1025px) {
+  .menu-btn {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+
+
+
+}
+//
+//@media only screen and (max-width: $screen-xxs) {
+//  .menu-btn {
+//    right: -1.7rem;
+//  }
+//}
